@@ -2,9 +2,9 @@
 
 public record CartLine(CartLineProduct Product)
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid Id { get; } = Guid.NewGuid();
 
-    public int Quantity { get; set; } = 1;
+    public int Quantity { get; private set; } = 1;
 
     public Price TotalPrice => Product.Price * Quantity;
 
