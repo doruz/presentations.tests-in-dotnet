@@ -1,8 +1,10 @@
 ﻿namespace Shopping.Core;
 
-public record Price(decimal Amount, string Currency = "EUR")
+public record Price(decimal Amount)
 {
-    public static Price operator *(Price price, int c) => new(price.Amount * c);
+    public string Currency => "EUR";
+
+    public static Price operator *(Price price, int multiplier) => new(price.Amount * multiplier);
 
     public static Price operator +(Price first, Price second) => new (first.Amount + second.Amount);
 
