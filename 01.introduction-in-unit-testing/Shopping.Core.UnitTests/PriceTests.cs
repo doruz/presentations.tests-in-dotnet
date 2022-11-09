@@ -51,7 +51,7 @@ namespace Shopping.Core.UnitTests
         [Theory]
         [InlineData(1, 2, 3)]
         [InlineData(9.99, 0.01, 10)]
-        public void When_TwoPricesAreSumedUp_Should_HaveCorrectAmount(double first, double second, double expected)
+        public void When_TwoPricesAreSummedUp_Should_HaveCorrectAmount(double first, double second, double expected)
         {
             // Arrange
             var firstPrice = new Price(first);

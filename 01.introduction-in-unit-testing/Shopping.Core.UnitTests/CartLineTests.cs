@@ -9,14 +9,14 @@ namespace Shopping.Core.UnitTests
         private readonly CartLineProduct _product;
         private readonly CartLine _systemUnderTest;
 
-        // Setup
+        // Lifecycle #1: SETUP
         public CartLineTests()
         {
             _product = new CartLineProduct("101", "Mouse", new Price(57.50));
             _systemUnderTest = new CartLine(_product);
         }
 
-        // Running test
+        // Lifecycle #2: EXECUTION
         [Fact]
         public void When_NewCartLineIsCreated_Should_HaveUniqueIds()
         {
@@ -74,7 +74,7 @@ namespace Shopping.Core.UnitTests
             _systemUnderTest.TotalPrice.Should().Be(expectedPrice);
         }
 
-        // Teardown
+        // Lifecycle #1: Teardown
         public void Dispose()
         {
             // nothing to do here
