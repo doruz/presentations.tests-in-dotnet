@@ -1,12 +1,27 @@
 ﻿namespace Shopping.Core;
 
-public record Price(decimal Amount)
+public record Price
 {
-    public string Currency => "EUR";
+    public double Amount { get; }
 
-    public static Price operator *(Price price, int multiplier) => new(price.Amount * multiplier);
+    public Price(double amount)
+    {
+        if (amount <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(amount));
+        }
 
-    public static Price operator +(Price first, Price second) => new (first.Amount + second.Amount);
+        Amount = amount;
+    }
 
-    public override string ToString() => $"{Amount:F} {Currency}";
+    public string Currency => "RON";
+
+    public static Price operator *(Price price, int multiplier) 
+        => new(price.Amount * multiplier);
+
+    public static Price operator +(Price first, Price second) 
+        => new (first.Amount + second.Amount);
+
+    public override string ToString() 
+        => $"{Amount:F} {Currency}";
 }
