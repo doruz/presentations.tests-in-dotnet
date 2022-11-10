@@ -2,8 +2,12 @@
 
 ## Resources
 
-- [Microsoft - Testing in .NET](https://learn.microsoft.com/en-us/dotnet/core/testing/)
-- [Microsoft - Best practices](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
+- Links
+  - [Microsoft - Testing in .NET](https://learn.microsoft.com/en-us/dotnet/core/testing/)
+  - [Microsoft - Best practices](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
+- Books
+  - [The Art of Unit Testing: with examples in C# ](https://www.amazon.com/Art-Unit-Testing-examples-ebook/dp/B097826FLN/)
+  - [Unit Testing Principles, Practices, and Patterns](https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns/dp/1617296279)
 
 ## Unit Tests
 
