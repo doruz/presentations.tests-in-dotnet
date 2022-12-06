@@ -1,0 +1,5 @@
+﻿new CartLineProduct("101", "Mouse", new Price(57.50));
+new CartLineProduct("102", "Keyboard", new Price(89.89));
+new CartLineProduct("103", "Headset", new Price(320));
+new CartLineProduct("104", "Monitor", new Price(999.99));
+new CartLineProduct("105", "Laptop", new Price(4750));
