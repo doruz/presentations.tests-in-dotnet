@@ -4,18 +4,10 @@ A **unit test** is a test that exercises individual software components or metho
 
 ## Topics
 
-- What is a unit tests?
-- Creating unit tests using xUnit / MSTest
-- Naming conventions
-- Test lifecycles
-- Arraging tests
-- Asserting results, states, exceptions
-- Best practices
-- Code coverage
+- Fakes: mocking and stubbing
 
-## Extra functionality
 
-- Keep cart active for an hour since last update. After that cart should be cleared.
-- Apply discounts on cartlines
-  - percent discounts
-  - fixed amount discounts
+## Tools
+
+- [NSubstitute](https://nsubstitute.github.io/)
+- [Moq](https://github.com/Moq/moq4/wiki/Quickstart)
