@@ -1,4 +1,4 @@
-﻿namespace Shopping.Core;
+﻿namespace Shopping.Core.Domain;
 
 public record Price
 {
@@ -6,7 +6,7 @@ public record Price
 
     public Price(double amount)
     {
-        if (amount <= 0)
+        if (amount < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(amount));
         }
@@ -16,12 +16,12 @@ public record Price
 
     public string Currency => "RON";
 
-    public static Price operator *(Price price, int multiplier) 
+    public static Price operator *(Price price, int multiplier)
         => new(price.Amount * multiplier);
 
-    public static Price operator +(Price first, Price second) 
-        => new (first.Amount + second.Amount);
+    public static Price operator +(Price first, Price second)
+        => new(first.Amount + second.Amount);
 
-    public override string ToString() 
+    public override string ToString()
         => $"{Amount:F} {Currency}";
 }

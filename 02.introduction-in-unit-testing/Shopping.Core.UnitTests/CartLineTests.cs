@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentAssertions;
+using Shopping.Core.Domain;
 using Xunit;
 
 namespace Shopping.Core.UnitTests

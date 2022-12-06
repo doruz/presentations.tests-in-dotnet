@@ -1,4 +1,4 @@
-﻿namespace Shopping.Core;
+﻿namespace Shopping.Core.Domain;
 
 public record CartLine(CartLineProduct Product)
 {

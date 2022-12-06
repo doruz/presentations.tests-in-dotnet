@@ -1,4 +1,5 @@
 using System;
+using Shopping.Core.Domain;
 using Xunit;
 
 namespace Shopping.Core.UnitTests
