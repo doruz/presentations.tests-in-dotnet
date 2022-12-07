@@ -4,7 +4,7 @@ public record Cart
 {
     public string CustomerId { get; init; } = default!;
 
-    public DateTime ExpiresAt { get; set; } = DateTime.MaxValue;
+    public DateTime ExpiresAt { get; private set; } = DateTime.MaxValue;
 
     public List<CartLine> CartLines { get; init; } = new();
 
