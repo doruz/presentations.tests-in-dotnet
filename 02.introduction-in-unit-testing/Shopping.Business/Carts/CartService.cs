@@ -7,10 +7,10 @@ namespace Shopping.Business.Carts;
 public sealed class CartService
 {
     private readonly ICartRepository _repository;
-    private readonly IProductsService _productsService;
+    private readonly ProductsService _productsService;
     private readonly CartSettings _settings;
 
-    public CartService(ICartRepository repository, IProductsService productsService, CartSettings settings)
+    public CartService(ICartRepository repository, ProductsService productsService, CartSettings settings)
     {
         _repository = repository;
         _productsService = productsService;
@@ -62,7 +62,7 @@ public sealed class CartService
         return new CartModel
         {
             TotalPrice = cart.TotalPrice.ToString(),
-            Lines = cart.CartLines.Select(ToCartLineModel)
+            Lines = cart.CartLines.Select(ToCartLineModel).ToList()
         };
     }
 }

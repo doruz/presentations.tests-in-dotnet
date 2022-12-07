@@ -5,7 +5,7 @@ public record NewCartLineModel(string ProductId);
 public record CartModel
 {
     public string TotalPrice { get; set; } = default!;
-    public IEnumerable<CartLineModel> Lines { get; set; } = default!;
+    public List<CartLineModel> Lines { get; set; } = default!;
 }
 
 public record CartLineModel

@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services
     .AddSingleton<ICartRepository, CartRepository>()
     .AddSingleton<CartService>()
-    .AddSingleton<IProductsService, ExternalProductsService>()
+    .AddSingleton<ProductsService, ExternalProductsService>()
     .AddSingleton(new CartSettings { ExpiresAfter = TimeSpan.FromSeconds(15) });
 
 var app = builder.Build();

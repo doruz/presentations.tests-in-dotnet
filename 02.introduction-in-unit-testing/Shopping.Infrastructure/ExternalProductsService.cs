@@ -3,7 +3,7 @@ using Shopping.Core.Domain;
 
 namespace Shopping.Infrastructure;
 
-public sealed class ExternalProductsService : IProductsService
+public sealed class ExternalProductsService : ProductsService
 {
     private static readonly List<CartLineProduct> Products = new()
     {
@@ -14,9 +14,9 @@ public sealed class ExternalProductsService : IProductsService
         new CartLineProduct("105", "Laptop", new Price(4750)),
     };
 
-    public IEnumerable<CartLineProduct> GetAll() 
+    public override IEnumerable<CartLineProduct> GetAll() 
         => Products;
 
-    public CartLineProduct? FindProduct(string id) 
+    public override CartLineProduct? FindProduct(string id) 
         => Products.FirstOrDefault(p => p.Id.Equals(id, StringComparison.InvariantCultureIgnoreCase));
 }

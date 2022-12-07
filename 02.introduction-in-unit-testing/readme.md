@@ -4,8 +4,12 @@ A **unit test** is a test that exercises individual software components or metho
 
 ## Topics
 
-- Fakes: mocking and stubbing
+- Test Doubles: Fake, Stubs, Mocks, etc.
 
+
+## Resources
+- https://martinfowler.com/bliki/TestDouble.html
+- https://www.danclarke.com/comparing-dotnet-mocking-libraries
 
 ## Tools
 
