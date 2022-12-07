@@ -12,7 +12,7 @@ public record Cart
         .Select(line => line.TotalPrice)
         .Aggregate(new Price(0), (p1, p2) => p1 + p2);
 
-    public bool IsExpired() => ExpiresAt <= DateTime.UtcNow;
+    public bool IsExpired() => ExpiresAt <= SystemDateTime.UtcNow;
 
     public static Cart Empty(string customerId) => new() { CustomerId = customerId.ToLowerInvariant() };
 
@@ -32,10 +32,15 @@ public record Cart
         {
             throw new ArgumentException("expiration time should be positive", nameof(time));
         }
-        
-        ExpiresAt = DateTime.UtcNow.Add(time);
+
+        ExpiresAt = SystemDateTime.UtcNow.Add(time);
     }
 
+    /*
+     * TODO-Exercise:
+     * - entire flow can be extended with unit tests
+     * - add new endpoint for updating quantity of a line item and extend it with unit tests on the business level.
+     */
     public void UpdateExistingLine(Guid lineId, int quantity)
     {
         if (quantity == 0)

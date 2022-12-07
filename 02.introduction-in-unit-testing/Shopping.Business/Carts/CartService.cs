@@ -42,7 +42,6 @@ public sealed class CartService
     {
         var cart = _repository.Find(customerId) ?? Cart.Empty(customerId);
 
-        // cart.ExpiresAt <= DateTime.UtcNow;
         if (cart.IsExpired())
         {
             cart = Cart.Empty(customerId);

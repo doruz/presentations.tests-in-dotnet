@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Api", "Shopping.Api\Shopping.Api.csproj", "{1EE25060-43F5-431F-A31A-5A885A030A0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Business.UnitTests", "Shopping.Business.UnitTests\Shopping.Business.UnitTests.csproj", "{697C7AAF-E1D4-4753-8008-88A06B874070}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{1EE25060-43F5-431F-A31A-5A885A030A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EE25060-43F5-431F-A31A-5A885A030A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EE25060-43F5-431F-A31A-5A885A030A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697C7AAF-E1D4-4753-8008-88A06B874070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697C7AAF-E1D4-4753-8008-88A06B874070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697C7AAF-E1D4-4753-8008-88A06B874070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697C7AAF-E1D4-4753-8008-88A06B874070}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{C5110D80-809F-4D6E-AA16-838E6AA32FF6} = {A455B8E5-759D-4738-A553-2CEDA70FB402}
 		{F3CE05D5-6EBD-4BBB-96FC-28FDF1F09726} = {A455B8E5-759D-4738-A553-2CEDA70FB402}
 		{337CA2B3-F047-4283-8C4F-57B949FF085A} = {D49D6BE9-7106-4488-8A2F-34C2611B5A49}
+		{697C7AAF-E1D4-4753-8008-88A06B874070} = {A455B8E5-759D-4738-A553-2CEDA70FB402}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0604F2E3-07FC-4050-B55A-579893670091}
